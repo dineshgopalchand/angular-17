@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngClass17';
+  private title = 'Angular Classes';
+  get updatedTitle() {
+    return this.title + '!!!';
+  }
 }
