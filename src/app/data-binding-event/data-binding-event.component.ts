@@ -25,6 +25,9 @@ export class DataBindingEventComponent implements OnInit {
   get titleVal() {
     return this.title + '!';
   }
+  changeStatus() {
+    this.isActive = !this.isActive;
+  }
 
   // getTitleVal() {
   //   return this.title + '!!';
