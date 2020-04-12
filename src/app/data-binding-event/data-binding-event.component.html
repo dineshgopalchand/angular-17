@@ -45,3 +45,8 @@
 <br>
 <button class="btn" [class.btn-primary]="isActive" [class.btn-danger]="!isActive">{{ isActive?'Active':'Inactive'}}</button>
 <!-- <button class="btn btn-danger">Button</button> -->
+
+<div style="font-size:1.3rem;color:white" [style.backgroundColor]=" isActive? 'green':'gray'" [style.color]=" isActive? 'white':'black'">
+    Above button is {{ isActive?'Active':'Inactive'}}
+</div>
+<!-- <div style="font-size:1.3rem;background:gray;color:black">Above button is {{ isActive?'Active':'Inactive'}}</div> -->
