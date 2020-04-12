@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseModule } from './course/course.module';
 import { CoursesService } from './course/services/courses.service';
+import { DataBindingEventComponent } from './data-binding-event/data-binding-event.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataBindingEventComponent
   ],
   imports: [
     BrowserModule,
