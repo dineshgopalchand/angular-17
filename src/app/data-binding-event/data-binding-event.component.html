@@ -14,5 +14,30 @@
 <h2 [innerText]="title" [title]="title"></h2> -->
 <!-- <h2 innerText="title"></h2> -->
 
-<img src="{{imgSrc}}" alt="dummy image">
-<img [src]="imgSrc" [alt]="imgSrc">
+<!-- <img src="{{imgSrc}}" alt="dummy image">
+<img [src]="imgSrc" [alt]="imgSrc"> -->
+
+
+<!-- table>tr*3>td*4>lorem1 -->
+<table>
+    <tr>
+        <td [attr.colspan]="colSpan">Lorem.</td>
+        <!-- <td>Repellat?</td> -->
+        <td>Officiis.</td>
+        <td>Ipsam.</td>
+    </tr>
+    <tr>
+        <td>Pariatur!</td>
+        <td [attr.rowspan]="rowSpan">Quisquam.</td>
+        <td>Doloremque!</td>
+        <td>Praesentium.</td>
+    </tr>
+    <tr>
+        <td>Placeat.</td>
+        <!-- <td>Qui.</td> -->
+        <td>Deserunt!</td>
+        <td>Nesciunt?</td>
+    </tr>
+</table>
+
+<!-- <img src="somesrc" data-src1="soomej1" alt=""> -->

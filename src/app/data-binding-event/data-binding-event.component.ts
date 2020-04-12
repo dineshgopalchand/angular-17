@@ -9,8 +9,10 @@ export class DataBindingEventComponent implements OnInit {
 
   // private title = '<i>Data Binding and Event Handling</i>';
   private title = 'Data Binding and Event Handling';
-  imgSrc = 'https://dummyimage.com/300x200/000/fff';
+  // imgSrc = 'https://dummyimage.com/300x200/000/fff';
   // date = new Date();
+  colSpan = 2;
+  rowSpan = 2;
   constructor() { }
 
   ngOnInit(): void {
