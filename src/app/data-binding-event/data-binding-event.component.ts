@@ -13,6 +13,8 @@ export class DataBindingEventComponent implements OnInit {
   // date = new Date();
   colSpan = 2;
   rowSpan = 2;
+
+  isActive = true;
   constructor() { }
 
   ngOnInit(): void {

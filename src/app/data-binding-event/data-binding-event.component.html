@@ -41,3 +41,7 @@
 </table>
 
 <!-- <img src="somesrc" data-src1="soomej1" alt=""> -->
+
+<br>
+<button class="btn" [class.btn-primary]="isActive" [class.btn-danger]="!isActive">{{ isActive?'Active':'Inactive'}}</button>
+<!-- <button class="btn btn-danger">Button</button> -->
