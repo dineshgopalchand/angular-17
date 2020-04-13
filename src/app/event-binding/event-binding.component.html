@@ -5,3 +5,15 @@
     <!-- <button class="btn btn-secondary" (click)="buttonClick($event)" onclick="jsAnotherFunction();jsAnotherFunction1()">Click me</button> -->
     <p>Lorem ipsum dolor sit.</p>
 </div>
+
+<hr>
+<h3>Add Topic</h3>
+<!-- div.form-group>input.form-control[placeholder="Enter new Topic"][name="newTopic"] -->
+<div class="form-group">
+    <!-- <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup)="inputFieldSubmit($event)" #newTopic> -->
+
+    <!-- Example of event filtering -->
+    <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup.enter)="inputFieldSubmit($event)" #newTopic>
+    <!-- #newTopic is template reference variable -->
+</div>
+<button class="btn btn-primary" (click)="inputSubmitted(newTopic)">Submit</button>

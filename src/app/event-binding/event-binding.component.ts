@@ -28,5 +28,17 @@ export class EventBindingComponent implements OnInit {
     console.log('parentClick function get called');
   }
 
+  inputSubmitted(input: HTMLInputElement) {
+    console.log(input.value);
+    console.log('from inputSubmitted');
+  }
+  // inputFieldSubmit(event: KeyboardEvent) {
+  //   if (event.keyCode === 13) {
+  //     console.log(event);
+  //   }
+  // }
+  inputFieldSubmit(event: KeyboardEvent) {
+    console.log(event);
+  }
 
 }
