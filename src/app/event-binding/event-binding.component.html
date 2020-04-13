@@ -13,7 +13,13 @@
     <!-- <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup)="inputFieldSubmit($event)" #newTopic> -->
 
     <!-- Example of event filtering -->
-    <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup.enter)="inputFieldSubmit($event)" #newTopic>
+    <!-- <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup.enter)="inputFieldSubmit($event)" [value]="newTopicValue" #newTopic> -->
+
+    <!-- <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" (keyup)="inputFieldSubmit(newTopic)" [value]="newTopicValue" #newTopic> -->
+
+    <input type="text" class="form-control" placeholder="Enter new Topic" name="newTopic" [(ngModel)]="newTopicValue" (keyup.enter)="newTopicSubmitted()">
     <!-- #newTopic is template reference variable -->
 </div>
 <button class="btn btn-primary" (click)="inputSubmitted(newTopic)">Submit</button>
+
+<div><b>New Topic:</b> {{newTopicValue}}</div>

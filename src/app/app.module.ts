@@ -7,6 +7,7 @@ import { CourseModule } from './course/course.module';
 import { CoursesService } from './course/services/courses.service';
 import { DataBindingEventComponent } from './data-binding-event/data-binding-event.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CourseModule
+    CourseModule,
+    FormsModule
   ],
   providers: [
     CoursesService

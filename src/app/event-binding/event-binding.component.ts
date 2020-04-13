@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-binding.component.scss']
 })
 export class EventBindingComponent implements OnInit {
+  newTopicValue = 'some topic';
 
   constructor() { }
 
@@ -37,8 +38,15 @@ export class EventBindingComponent implements OnInit {
   //     console.log(event);
   //   }
   // }
-  inputFieldSubmit(event: KeyboardEvent) {
-    console.log(event);
+  // inputFieldSubmit(event: KeyboardEvent) {
+  //   console.log(event);
+  //   this.newTopicValue = (event.target as HTMLInputElement).value;
+  // }
+  inputFieldSubmit(input: HTMLInputElement) {
+    this.newTopicValue = input.value;
+  }
+  newTopicSubmitted() {
+    console.log(this.newTopicValue);
   }
 
 }
