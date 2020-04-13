@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { CourseModule } from './course/course.module';
 import { CoursesService } from './course/services/courses.service';
 import { DataBindingEventComponent } from './data-binding-event/data-binding-event.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingEventComponent
+    DataBindingEventComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
