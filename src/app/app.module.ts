@@ -10,6 +10,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { TopicsComponent } from './topics/topics.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { SummaryPipe } from './common/pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PipeComponent } from './pipe/pipe.component';
     DataBindingEventComponent,
     EventBindingComponent,
     TopicsComponent,
-    PipeComponent
+    PipeComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

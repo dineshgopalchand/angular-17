@@ -89,5 +89,22 @@
     {{course.currentDate | date:'MMM d, y, HH:mm:ss'}}
 </p>
 
+
 <!-- https://www.npmjs.com/package/uuid -->
 <!-- https://angular.io/api/common/DatePipe -->
+<!-- <div>
+    {{course.details | summary:'{max:100}':'{min:50}'}}
+</div> -->
+<!-- <div>
+    {{course.details | summary:'100'}}
+</div>
+<div>
+    {{course.details | summary}}
+</div>
+<div>
+    {{course.details | summary:'full'}}
+</div> -->
+<div>
+    {{course.details | summary:summaryLength}}
+    <button class="btn btn-link" (click)="updateSummaryLength()">{{summaryLength===100?'Show More':'Show Less'}}</button>
+</div>
