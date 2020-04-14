@@ -1,0 +1,12 @@
+<h3>Topics list</h3>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter new topic" name="newTopic" (keyup.enter)="newTopicSubmit()" [(ngModel)]="newTopic">
+</div>
+<hr>
+<div *ngIf="topicList.length==0">No topics added</div>
+<ul class="list-group" *ngIf="topicList.length!=0">
+    <li class="list-group-item" *ngFor="let topic of topicList">
+        <button class="btn btn-danger" (click)="deleteTopic(topic)">Delete</button> {{topic.value}}
+    </li>
+</ul>
+<!-- {{topicList|json}} -->
