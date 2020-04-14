@@ -9,13 +9,15 @@ import { DataBindingEventComponent } from './data-binding-event/data-binding-eve
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { TopicsComponent } from './topics/topics.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingEventComponent,
     EventBindingComponent,
-    TopicsComponent
+    TopicsComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,

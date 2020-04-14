@@ -1,0 +1,93 @@
+<p>{{course | json}}</p>
+<p>{{course | keyvalue | json}}</p>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    <tr *ngFor="let item of course | keyvalue">
+        <td>{{item.key}}</td>
+        <td>{{item.value}}</td>
+    </tr>
+</table>
+
+
+<p>
+    {{course.title}}
+</p>
+<!-- <p>
+    {{titleUpper}}
+</p> -->
+<p>
+    {{course.title | uppercase}}
+</p>
+<p>
+    {{course.title | lowercase}}
+</p>
+<p>
+    {{course.title | titlecase}}
+</p>
+<p>
+    {{course.rating }}
+</p>
+<p>
+    {{course.rating | number}}
+</p>
+<p>
+    {{course.rating1 | number}}
+</p>
+<p>
+    {{course.rating | number:'1.2-2'}}
+</p>
+<p>
+    {{course.rating1 | number:'1.1-2'}}
+</p>
+<p>
+    {{course.rating2 | number:'4.2-2'}}
+</p>
+<p>
+    INR {{course.price }}
+</p>
+<p>
+    {{course.price | currency}}
+</p>
+<p>
+    {{course.price | currency:'INR'}}
+</p>
+<p>
+    {{course.price | currency:'EUR'}}
+</p>
+<p>
+    {{course.price | currency:'HKD'}}
+</p>
+<p>
+    {{course.price | currency:'AUD'}}
+</p>
+<p>
+    {{course.price | currency:'DGC'}}
+</p>
+
+<p>
+    {{course.releaseDate}}
+</p>
+<p>
+    {{course.releaseDate | date}}
+</p>
+<p>
+    {{course.releaseDate | date:'longDate'}}
+</p>
+<p>
+    {{course.releaseDate | date:'fullDate'}}
+</p>
+<p>
+    {{course.currentDate | date:'MMM d, y, h:mm:ss a'}}
+</p>
+<p>
+    {{course.currentDate | date:'MMM d y H:mm:ss'}}
+</p>
+<p>
+    {{course.currentDate | date:'MMM d, y, HH:mm:ss'}}
+</p>
+
+<!-- https://www.npmjs.com/package/uuid -->
+<!-- https://angular.io/api/common/DatePipe -->
