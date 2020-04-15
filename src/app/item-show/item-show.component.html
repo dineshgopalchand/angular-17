@@ -1,0 +1,11 @@
+<div class="card">
+    <img class="card-img-top" [src]="details.imgsrc" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{details.title}}</h5>
+        <p class="card-text">{{details.desc | summary:'35'}}</p>
+        <div class="checkbox">
+            <input type="checkbox" name="select" [checked]="isSelected" #checkbox (change)="selectedChange(checkbox)">
+        </div>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>

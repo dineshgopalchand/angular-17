@@ -1,0 +1,15 @@
+<div>
+    <h3>Item List</h3>
+    <p>
+        Item Selected: {{selectedItems.length}}
+        <button type="button" class="btn btn-primary" *ngFor="let item of selectedItems">
+            {{item.title}} <span class="badge badge-light" (click)="removeSelection(item)">x</span>
+        </button>
+    </p>
+    <div class="row">
+        <div class="col-3" *ngFor="let item of itemList">
+            <app-item-show [details]="item" [isSelected]="getChecked(item)" (selectionChange)="selectionChanged($event)"></app-item-show>
+        </div>
+
+    </div>
+</div>

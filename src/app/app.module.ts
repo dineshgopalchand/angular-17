@@ -12,6 +12,8 @@ import { TopicsComponent } from './topics/topics.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SummaryPipe } from './common/pipes/summary.pipe';
 import { TextFormatPipe } from './common/pipes/text-format.pipe';
+import { ItemShowComponent } from './item-show/item-show.component';
+import { ItemListComponent } from './item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TextFormatPipe } from './common/pipes/text-format.pipe';
     TopicsComponent,
     PipeComponent,
     SummaryPipe,
-    TextFormatPipe
+    TextFormatPipe,
+    ItemShowComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
