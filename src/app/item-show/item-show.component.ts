@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Interface } from 'readline';
 
 @Component({
   selector: 'app-item-show',
