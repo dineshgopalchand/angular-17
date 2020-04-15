@@ -20,6 +20,7 @@ export class PipeComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit culpa voluptas ab, ipsam laboriosam impedit quis vitae odio fugiat quasi hic ducimus temporibus quibusdam optio ex expedita cum maiores soluta non consequatur doloremque magnam saepe? Corporis sed saepe molestiae sequi soluta reprehenderit vitae harum suscipit? Ea odio doloribus accusantium corporis vero, error architecto iusto ipsa amet illum omnis. Maxime officiis laudantium necessitatibus harum, aliquid, quis iusto dolorem tenetur laboriosam ullam praesentium esse explicabo deserunt natus, eligendi provident ea aut corrupti deleniti rerum? Repellendus ducimus sapiente molestiae eaque veniam doloribus reiciendis, assumenda nemo voluptatem error ad debitis rem consectetur? Quia, voluptatum.`
   };
+  colorPattern = ['#333745', '#e63462', '#fe5f55', 'blue', 'green', 'red'];
 
   constructor() { }
 

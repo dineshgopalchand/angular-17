@@ -108,3 +108,8 @@
     {{course.details | summary:summaryLength}}
     <button class="btn btn-link" (click)="updateSummaryLength()">{{summaryLength===100?'Show More':'Show Less'}}</button>
 </div>
+<div>
+    <!-- <div [innerHTML]="course.details | summary:summaryLength | textFormat"></div> -->
+    <div [innerHTML]="course.details | summary:summaryLength | textFormat:{color:colorPattern}"></div>
+    <button class="btn btn-link" (click)="updateSummaryLength()">{{summaryLength===100?'Show More':'Show Less'}}</button>
+</div>

@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { TopicsComponent } from './topics/topics.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SummaryPipe } from './common/pipes/summary.pipe';
+import { TextFormatPipe } from './common/pipes/text-format.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SummaryPipe } from './common/pipes/summary.pipe';
     EventBindingComponent,
     TopicsComponent,
     PipeComponent,
-    SummaryPipe
+    SummaryPipe,
+    TextFormatPipe
   ],
   imports: [
     BrowserModule,
