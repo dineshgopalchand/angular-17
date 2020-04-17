@@ -14,6 +14,8 @@ import { SummaryPipe } from './common/pipes/summary.pipe';
 import { TextFormatPipe } from './common/pipes/text-format.pipe';
 import { ItemShowComponent } from './item-show/item-show.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { BasicThemeComponent } from './common/theme/basic-theme/basic-theme.component';
+import { HeaderComponent } from './common/component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ItemListComponent } from './item-list/item-list.component';
     SummaryPipe,
     TextFormatPipe,
     ItemShowComponent,
-    ItemListComponent
+    ItemListComponent,
+    BasicThemeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
