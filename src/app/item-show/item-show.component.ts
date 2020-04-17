@@ -1,9 +1,17 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-item-show',
+  // templateUrl: './item-show.component.html',
+  // template: '<div> form template property</div>',
+  // template: `<div>
+  // form template property
+  // </div>`,
   templateUrl: './item-show.component.html',
-  styleUrls: ['./item-show.component.scss'],
+  styles: ['.card-title {background: #a2a2a2;color:red;}', `.card-body{}`],
+  styleUrls: ['./item-show.component.scss', './item-show.component.1.css'],
+  // encapsulation: ViewEncapsulation.Emulated
+
   // inputs: ['details'],
 })
 export class ItemShowComponent implements OnInit {
