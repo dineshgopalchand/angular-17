@@ -17,6 +17,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { BasicThemeComponent } from './common/theme/basic-theme/basic-theme.component';
 import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FooterComponent } from './common/component/footer/footer.component';
     ItemListComponent,
     BasicThemeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
