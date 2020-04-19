@@ -1,13 +1,11 @@
 <div class="card main-template">
     <div class="card-header top-header">
-        <app-header></app-header>
+        <ng-content select=".header"></ng-content>
     </div>
     <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <ng-content select=".main-content"></ng-content>
     </div>
-    <div class="card-footer">
-        &copy; sdlctraining.in
-    </div>
+    <!-- <div class="card-footer">
+        <app-footer></app-footer>
+    </div> -->
 </div>
