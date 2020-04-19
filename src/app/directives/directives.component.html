@@ -25,8 +25,11 @@
 
     <ng-template #showCourse>
         <ul class="list-group">
-            <li *ngFor="let course of courseList" class="list-group-item">
-                {{course.name}}
+            <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [class.list-group-item-light]="e" [class.list-group-item-dark]="!e">
+                <!-- list-group-item-success -->
+                <!-- list-group-item-dark -->
+                <b>{{indexVal+1}}. </b>{{course.name}}
+                <!-- ODD:{{o}} Even:{{e}} -->
             </li>
         </ul>
     </ng-template>
@@ -67,3 +70,14 @@
             width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 </div> -->
+
+
+<div>{{numberList|json}}</div>
+<ul>
+    <!-- <li *ngFor="let number of numberList">
+        <span *ngIf="number%2==0">{{number}}</span>
+    </li> -->
+    <ng-container *ngFor="let number of numberList">
+        <li *ngIf="number%2==0">{{number}}</li>
+    </ng-container>
+</ul>

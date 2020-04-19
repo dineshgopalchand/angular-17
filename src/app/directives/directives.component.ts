@@ -10,6 +10,8 @@ export class DirectivesComponent implements OnInit {
 
   viewTab = 'course';
 
+  numberList = [1, 2, 4, 3, 2, 4, 56, 332, 2, 5, 7];
+
   constructor(private courseService: CoursesService) { }
 
   ngOnInit(): void {
