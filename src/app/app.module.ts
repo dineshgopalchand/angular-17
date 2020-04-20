@@ -18,6 +18,7 @@ import { BasicThemeComponent } from './common/theme/basic-theme/basic-theme.comp
 import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { InputFormatDirective } from './common/directive/input-format.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DirectivesComponent } from './directives/directives.component';
     BasicThemeComponent,
     HeaderComponent,
     FooterComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
