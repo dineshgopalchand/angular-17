@@ -17,6 +17,9 @@
         <div *ngIf="courseList.length>0;then showCourse else noCourse"></div>
 
         <ng-template #showCourse>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter new course" #newCourse (keyup.enter)="addNewCourse(newCourse)">
+            </div>
             <ul class="list-group">
                 <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [ngClass]="{
                     'list-group-item-light': e,
@@ -45,4 +48,16 @@
     <div *ngSwitchDefault>
         Not a valid selection
     </div>
+</div>
+
+<hr>
+<div>
+    <ul>
+        <li *ngFor="let detail of details">
+            <!-- <ng-container *ngIf="detail.name">
+                <b>Name:</b>{{ detail.name.firstname }} {{detail.name.lastname}} <b> age:</b>{{detail.age}}
+            </ng-container> -->
+            <b>Name:</b>{{ detail.name?.firstname }} {{detail.name?.lastname}} <b> age:</b>{{detail.age}}
+        </li>
+    </ul>
 </div>
