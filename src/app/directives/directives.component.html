@@ -10,30 +10,33 @@
     </li>
 </ul>
 
-<div *ngIf="viewTab=='course'">
+<div [ngSwitch]="viewTab">
+    <div *ngSwitchCase="'course'">
+        <h3>Course List</h3>
 
-    <h3>Course List</h3>
+        <div *ngIf="courseList.length>0;then showCourse else noCourse"></div>
 
-    <div *ngIf="courseList.length>0;then showCourse else noCourse"></div>
-
-    <ng-template #showCourse>
-        <ul class="list-group">
-            <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [class.list-group-item-light]="e" [class.list-group-item-dark]="!e">
-                <b>{{indexVal+1}}. </b>{{course.name}}
-            </li>
-        </ul>
-    </ng-template>
-    <ng-template #noCourse>
-        <div>No courses available!!</div>
-    </ng-template>
-</div>
-
-<div *ngIf="viewTab=='topic'">
-    <app-topics></app-topics>
-</div>
-<div *ngIf="viewTab=='map'">
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.232402342361!2d77.70145651397104!3d12.956975318706817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cd124e4dab%3A0xa6a6d1a400ac9903!2sSDLC%20Training!5e0!3m2!1sen!2sin!4v1587270831718!5m2!1sen!2sin"
-            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <ng-template #showCourse>
+            <ul class="list-group">
+                <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [class.list-group-item-light]="e" [class.list-group-item-dark]="!e">
+                    <b>{{indexVal+1}}. </b>{{course.name}}
+                </li>
+            </ul>
+        </ng-template>
+        <ng-template #noCourse>
+            <div>No courses available!!</div>
+        </ng-template>
+    </div>
+    <div *ngSwitchCase="'map'">
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.232402342361!2d77.70145651397104!3d12.956975318706817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cd124e4dab%3A0xa6a6d1a400ac9903!2sSDLC%20Training!5e0!3m2!1sen!2sin!4v1587270831718!5m2!1sen!2sin"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    <div *ngSwitchCase="'topic'">
+        <app-topics></app-topics>
+    </div>
+    <div *ngSwitchDefault>
+        Not a valid selection
     </div>
 </div>
