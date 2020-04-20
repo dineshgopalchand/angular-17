@@ -18,7 +18,13 @@
 
         <ng-template #showCourse>
             <ul class="list-group">
-                <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [class.list-group-item-light]="e" [class.list-group-item-dark]="!e">
+                <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [ngClass]="{
+                    'list-group-item-light': e,
+                    'list-group-item-dark':!e
+                }" [ngStyle]="{
+                    fontWeight: e ? '600':'bold',
+                    'font-style': indexVal%2==1? 'italic':'normal'
+                }">
                     <b>{{indexVal+1}}. </b>{{course.name}}
                 </li>
             </ul>

@@ -8,7 +8,7 @@ import { CoursesService } from '../course/services/courses.service';
 })
 export class DirectivesComponent implements OnInit {
 
-  viewTab = 'topic';
+  viewTab = 'course';
 
   numberList = [1, 2, 4, 3, 2, 4, 56, 332, 2, 5, 7];
 
