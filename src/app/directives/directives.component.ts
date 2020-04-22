@@ -47,12 +47,13 @@ export class DirectivesComponent implements OnInit {
   get courseList() {
     return this.courseService.courseList;
   }
-  addNewCourse(courseInput: HTMLInputElement) {
+  addNewCourse(courseInput, inputEle: HTMLInputElement) {
     this.courseService.courseList.push({
       id: Date.now(),
       name: courseInput.value
     });
-    courseInput.value = '';
+    // (event.target as HTMLInputElement).value = '';
+    inputEle.value = '';
   }
 
 }

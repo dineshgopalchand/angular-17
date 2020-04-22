@@ -18,7 +18,7 @@
 
         <ng-template #showCourse>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Enter new course" #newCourse (keyup.enter)="addNewCourse(newCourse)" [appInputFormat]="'uppercase'" [error]="{minlength:2}" [errorClass]="'red-border'">
+                <input type="text" class="form-control" placeholder="Enter new course" #newCourse (updateValue)="addNewCourse($event,newCourse)" [appInputFormat]="'uppercase'" [error]="{minlength:2}" [errorClass]="'red-border'">
             </div>
             <ul class="list-group">
                 <li *ngFor="let course of courseList;index as indexVal;odd as o;even as e" class="list-group-item " [ngClass]="{
