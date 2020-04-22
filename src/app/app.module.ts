@@ -19,6 +19,7 @@ import { HeaderComponent } from './common/component/header/header.component';
 import { FooterComponent } from './common/component/footer/footer.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './common/directive/input-format.directive';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InputFormatDirective } from './common/directive/input-format.directive'
     HeaderComponent,
     FooterComponent,
     DirectivesComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
