@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -15,6 +16,11 @@ export class ContactFormComponent implements OnInit {
   }
   inputFieldChange(event: KeyboardEvent) {
     console.log(event);
+    // console.log(this.firstName);
+  }
+
+  contactFormSubmit(form: NgForm) {
+    console.log(form);
   }
 
 }

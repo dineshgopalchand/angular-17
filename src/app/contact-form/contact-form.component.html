@@ -1,20 +1,31 @@
 <div class="contact-form">
-    <form action="">
+    <form (ngSubmit)="contactFormSubmit(contactForm)" #contactForm="ngForm" ngForm autocomplete="off">
         <h3>Contact Form</h3>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter First Name" name="firstname" required minlength="3" maxlength="20" pattern="dinesh" [(ngModel)]="firstName" (change)="inputFieldChange($event)">
+            <input type="text" class="form-control" placeholder="Enter First Name" name="firstname" required minlength="3" maxlength="20" pattern="^[a-zA-Z]+$" ngModel #firstname="ngModel">
+            <!-- [ngModelOptions]="{standalone: true}" -->
+            <!-- (change)="inputFieldChange(firstname)" -->
+        </div>
+
+        <div class="alert alert-danger" *ngIf="firstname.errors && firstname.touched">
+            <div *ngIf="firstname.errors.required">First name is required</div>
+            <div *ngIf="firstname.errors.minlength">First name minimum length should be {{firstname.errors.minlength.requiredLength}}</div>
+            <div *ngIf="firstname.errors.maxlength">First name maximum length should be {{firstname.errors.maxlength.requiredLength}}</div>
+            <div *ngIf="firstname.errors.pattern">First name is not valid</div>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastname">
+            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastname" ngModel required>
         </div>
         <div class="form-group">
-            <input type="email" class="form-control" placeholder="Enter Email ID" name="firstname">
+            <input type="email" class="form-control" placeholder="Enter Email ID" name="email" ngModel required>
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="comment" rows="4" placeholder="Add comment"></textarea>
+            <textarea class="form-control" name="comment" rows="4" placeholder="Add comment" ngModel></textarea>
         </div>
         <div>
-            <button class="btn btn-primary form-control">Submit</button>
+            <button class="btn btn-primary form-control" [disabled]="contactForm.invalid">Submit</button>
         </div>
     </form>
 </div>
+
+<!-- {{firstname.errors | json}} -->
