@@ -21,6 +21,19 @@ export class ContactFormComponent implements OnInit {
 
   contactFormSubmit(form: NgForm) {
     console.log(form);
+    console.log(form.value);
+    // api call to save the data
+
+    form.controls.firstname.setErrors({ // Set error to specific input field
+      someError: true
+    });
+    form.controls.firstName.reset(); // reset value to specific input field
+
+    form.control.setErrors({ // this  is custom error for entire form
+      notSubmited: true
+    });
+
+    form.reset(); // to reset form
   }
 
 }

@@ -28,4 +28,9 @@
     </form>
 </div>
 
+<div class="alert alert-danger" *ngIf="contactForm.errors?.notSubmited">
+    Unable to submit the form, Please try again later
+</div>
+
 <!-- {{firstname.errors | json}} -->
+<!-- {{contactForm.errors | json}} -->
