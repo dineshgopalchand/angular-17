@@ -7,7 +7,7 @@ import { CourseModule } from './course/course.module';
 import { CoursesService } from './course/services/courses.service';
 import { DataBindingEventComponent } from './data-binding-event/data-binding-event.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopicsComponent } from './topics/topics.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SummaryPipe } from './common/pipes/summary.pipe';
@@ -20,6 +20,7 @@ import { FooterComponent } from './common/component/footer/footer.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputFormatDirective } from './common/directive/input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,15 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FooterComponent,
     DirectivesComponent,
     InputFormatDirective,
-    ContactFormComponent
+    ContactFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CourseModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CoursesService
