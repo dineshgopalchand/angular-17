@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModelGroup, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,6 +9,30 @@ import { NgForm } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
 
   firstName = 'din';
+  agreement = false;
+
+  contactOption = [
+    {
+      id: 1,
+      name: 'email'
+    },
+    {
+      id: 2,
+      name: 'SMS'
+    },
+    {
+      id: 3,
+      name: 'Whatsapp'
+    },
+    {
+      id: 4,
+      name: 'Postal'
+    },
+    {
+      id: 5,
+      name: 'call'
+    }
+  ];
 
   constructor() { }
 
@@ -24,10 +48,10 @@ export class ContactFormComponent implements OnInit {
     console.log(form.value);
     // api call to save the data
 
-    form.controls.firstname.setErrors({ // Set error to specific input field
-      someError: true
-    });
-    form.controls.firstName.reset(); // reset value to specific input field
+    // form.controls.firstname.setErrors({ // Set error to specific input field
+    //   someError: true
+    // });
+    // form.controls.firstName.reset(); // reset value to specific input field
 
     form.control.setErrors({ // this  is custom error for entire form
       notSubmited: true
