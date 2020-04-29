@@ -7,7 +7,7 @@
                 <!-- [ngModelOptions]="{standalone: true}" -->
                 <!-- (change)="inputFieldChange(firstname)" -->
             </div>
-
+            <!-- {{firstname.errors | json}} -->
             <div class="alert alert-danger" *ngIf="firstname.errors && firstname.touched">
                 <div *ngIf="firstname.errors.required">First name is required</div>
                 <div *ngIf="firstname.errors.minlength">First name minimum length should be {{firstname.errors.minlength.requiredLength}}</div>

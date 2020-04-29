@@ -53,6 +53,16 @@ export class ContactFormComponent implements OnInit {
     // });
     // form.controls.firstName.reset(); // reset value to specific input field
 
+    // form.controls.firstname.setErrors({ // Set error to specific input field
+    //   someError: true
+    // });
+
+    // TO PERFORM OPERATION LIKE setErrors/reset when working with nested FormGroup
+    // form.control.get('namegroup.firstname').setErrors({
+    //   someError: true
+    // });
+
+
     form.control.setErrors({ // this  is custom error for entire form
       notSubmited: true
     });
