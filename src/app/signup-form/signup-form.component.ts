@@ -20,7 +20,9 @@ export class SignupFormComponent implements OnInit {
         Validators.maxLength(15),
         // Validators.pattern(/^[a-zA-Z0-9]+$/),
         UsernameValidator.shouldNotContainSpace
-      ]),
+      ],
+      UsernameValidator.shouldBeUnique
+      ),
       password: new FormControl(''),
       confirmPassword: new FormControl('')
     });
