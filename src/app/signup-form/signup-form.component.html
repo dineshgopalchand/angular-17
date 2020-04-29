@@ -1,7 +1,8 @@
 <h3>Signup</h3>
 <form [formGroup]="signUp">
-    <div class="form-group">
+    <div class="form-group" style="position: relative;">
         <input type="text" formControlName="username" class="form-control" placeholder="Username">
+        <i class="fa fa-spinner loader rotating" *ngIf="username.pending"></i>
     </div>
     <!-- <div class="alert alert-danger" *ngIf="signUp.get('username').errors  && signUp.get('username').touched"> -->
     <div class="alert alert-danger" *ngIf="username.errors  && username.touched">
