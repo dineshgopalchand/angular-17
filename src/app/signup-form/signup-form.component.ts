@@ -21,6 +21,12 @@ export class SignupFormComponent implements OnInit {
       ]),
       password: new FormControl('')
     });
+    // this.signUp.get(['username']);
+    // this.signUp.get('username').errors;
+    // this.signUp.get('username').touched;
+  }
+  get username() {
+    return this.signUp.get('username');
   }
 
 }

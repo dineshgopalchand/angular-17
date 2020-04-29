@@ -3,9 +3,26 @@
     <div class="form-group">
         <input type="text" formControlName="username" class="form-control" placeholder="Username">
     </div>
+    <!-- <div class="alert alert-danger" *ngIf="signUp.get('username').errors  && signUp.get('username').touched"> -->
+    <div class="alert alert-danger" *ngIf="username.errors  && username.touched">
+        <!-- some errors {{username.errors | json}} -->
+        <div *ngIf="username.errors.required">
+            Username is required
+        </div>
+        <div *ngIf="username.errors.minlength">
+            Username is shorter then {{username.errors.minlength.requiredLength}} charecters
+        </div>
+        <div *ngIf="username.errors.maxlength">
+            Username is more then {{username.errors.maxlength.requiredLength}} charecters
+        </div>
+        <div *ngIf="username.errors.pattern">
+            Username is not valid
+        </div>
+    </div>
     <div class="form-group">
         <input type="password" formControlName="password" class="form-control" placeholder="Password">
     </div>
+
     <div class="form-group">
         <button class="btn btn-primary form-control">Signup</button>
     </div>
