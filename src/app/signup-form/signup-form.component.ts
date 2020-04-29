@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UsernameValidator } from '../common/validators/username.validator';
 
 @Component({
   selector: 'app-signup-form',
@@ -17,9 +18,11 @@ export class SignupFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
         Validators.maxLength(15),
-        Validators.pattern(/^[a-zA-Z0-9]+$/)
+        // Validators.pattern(/^[a-zA-Z0-9]+$/),
+        UsernameValidator.shouldNotContainSpace
       ]),
-      password: new FormControl('')
+      password: new FormControl(''),
+      confirmPassword: new FormControl('')
     });
     // this.signUp.get(['username']);
     // this.signUp.get('username').errors;
